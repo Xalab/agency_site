@@ -4,7 +4,7 @@ import './Footer.css';
 import logo from '../assets/logo.png';
 import PrivacyPolicy from '../assets/docs/PrivacyPolicy.pdf';
 import LicenseAgreement from '../assets/docs/LicenseAgreement.pdf';
-import { FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaTelegramPlane, FaWhatsapp, FaVk } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -31,11 +31,17 @@ const Footer = () => {
                 </div>
                 <div className="footer-right">
                     <p className="social-links">
-                        <a href="https://t.me/yourTelegramHandle" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaTelegramPlane />
                         </a>
-                        <a href="https://wa.me/yourWhatsAppNumber" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaWhatsapp />
+                        </a>
+                        <a href="https://vk.com/club227392148" target="_blank" rel="noopener noreferrer" className="social-link">
+                            <FaVk />
+                        </a>
+                        <a href="https://www.instagram.com/galteamelyushin?igsh=MWx3cHNudGhtbGc4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-link">
+                            <FaInstagram />
                         </a>
                     </p>
                 </div>

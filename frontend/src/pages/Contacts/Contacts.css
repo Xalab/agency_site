@@ -95,6 +95,6 @@ button[type="submit"]:hover {
     }
 
     .contact-image-container {
-        height: 300px; /* Уменьшаем высоту для мобильных устройств */
+        height: 400px; /* Уменьшаем высоту для мобильных устройств */
     }
 }

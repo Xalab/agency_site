@@ -36,7 +36,7 @@ const AdditionalApplicationForm = () => {
         e.preventDefault();
         if (validateForm()) {
             try {
-                const response = await fetch('http://localhost:6442/api/data', {
+                const response = await fetch('/api/data', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
