@@ -1,0 +1,20 @@
+{
+  "contacts": {
+    "phone": {
+      "label": "Телефон",
+      "value": "+380123456789"
+    },
+    "email": {
+      "label": "Электронная почта",
+      "value": "example@example.com"
+    },
+    "telegram": {
+      "label": "Telegram",
+      "value": "@example_telegram"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "+380987654321"
+    }
+  }
+}

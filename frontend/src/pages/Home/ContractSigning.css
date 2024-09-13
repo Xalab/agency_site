@@ -1,0 +1,87 @@
+.contract-signing {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.contract-signing h2 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; /* Два шага и одна стрелка между ними */
+    align-items: center;
+    gap: 40px; /* Пространство между элементами */
+    margin: 0 70px 0 70px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.number {
+    font-size: 68px;
+    font-weight: bold;
+    color: #5a65d8;
+    margin-right: 20px;
+}
+
+.step p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.arrow {
+    text-align: center;
+}
+
+.arrow img {
+    width: 30%;
+    height: 30%;
+}
+
+/* Мобильные стрелки */
+.mobile-arrow {
+    display: none;
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .steps-container {
+        grid-template-columns: 1fr; /* Шаги располагаются вертикально */
+        gap: 20px;
+    }
+
+    .arrow {
+        display: none; /* Убираем стрелки на мобильных устройствах */
+    }
+
+    .mobile-arrow {
+        display: block; /* Показываем стрелки для мобильной версии */
+        font-size: 36px; /* Размер мобильной стрелки */
+    }
+
+    .contract-signing h2 {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .steps-container {
+        margin: 0 10px 0 10px;
+    }
+
+    .number {
+        font-size: 48px;
+    }
+
+    .step p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,182 @@
+.jobs-summary {
+    padding: 20px 20px;
+    background-color: #ffffff;
+}
+
+.jobs-summary h2 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.job-card-wrapper {
+    position: relative;
+}
+
+.job-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px; /* Закругляем все углы */
+    position: relative;
+    margin-bottom: -40px; /* Сдвигаем изображение, чтобы оно находилось над карточкой */
+    z-index: 1;
+}
+
+.job-country {
+    display: inline-block;
+    background-color: #5a65d8;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 45px;
+    font-size: 20px;
+    position: absolute;
+    bottom: -20px; /* Позиционируем наполовину над картинкой и наполовину над карточкой */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.job-country i {
+    margin-right: 8px;
+}
+
+.job-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border-radius: 0 0 40px 40px;
+    border: 2px solid #5a65d8; /* Внутренний бордер */
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    position: relative;
+    z-index: 0;
+}
+
+.job-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.job-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.job-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.job-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.details-button {
+    padding: 10px 20px;
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.more-button {
+    width: 400px;
+    padding: 10px;
+}
+
+.details-button:hover {
+    background-color: #1c67c0;
+}
+
+@media (max-width: 768px) {
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Основной контейнер для индикатора загрузки */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-color: #f9f9f9;
+}
+
+/* Контейнер для спиннера */
+.loading-spinner {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+/* Стиль для каждой части спиннера */
+.spinner-part {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #3498db;
+    animation: spin 1.5s ease infinite;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Настройки для первой части спиннера */
+.part1 {
+    border-top-color: #3498db;
+    border-width: 10px;
+}
+
+/* Настройки для второй части спиннера (меньше радиус) */
+.part2 {
+    border-top-color: #9b59b6;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 10px;
+    border-width: 8px;
+}
+
+/* Настройки для третьей части спиннера (ещё меньше радиус) */
+.part3 {
+    border-top-color: #f39c12;
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+    border-width: 6px;
+}

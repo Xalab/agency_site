@@ -1,0 +1,223 @@
+.additional-application-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.image-container {
+    width: 45%;
+    background-image: url('../../assets/img_hands_together.png'); /* Замените на правильный путь к изображению */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    margin-right: 5%;
+    height: 457.5px;
+}
+
+.overlay {
+    background-color: rgba(90, 101, 216, 0.8);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.overlay h2 {
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.overlay p {
+    font-size: 16px;
+    text-align: left;
+}
+
+.contacts-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contact-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-item strong {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.form-container {
+    width: 45%;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #5a65d8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px; /* Уменьшение размера полей ввода */
+    border: none;
+    border-bottom: 2px solid #ccc; /* Подчёркивание снизу */
+    background-color: #ffffff; /* Поля ввода белые по умолчанию */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+}
+
+.form-group input::placeholder {
+    color: #333;
+}
+
+.form-group input:focus {
+    background-color: #e0e0e0;
+}
+
+button[type="submit"] {
+    padding: 15px 0;
+    background-color: #5a65d8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2f80ed;
+}
+
+@media (max-width: 768px) {
+    .additional-application-form {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-container,
+    .form-container {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .overlays p {
+        font-size: 15px;
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group.error input {
+    border-bottom-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+}
+
+button[type="submit"] {
+    padding: 15px 0;
+    background-color: #5a65d8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2f80ed;
+}
+
+.success-message {
+    background-color: #5a65d8;
+    color: white;
+    padding: 10px 20px;
+    position: fixed; /* Изменяем на fixed, чтобы окно было закреплено к экрану */
+    top: 90px; /* Отступ от верхней части экрана */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s ease-in-out;
+    z-index: 9999; /* Устанавливаем высокий z-index, чтобы сообщение было поверх других элементов */
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; top: 0; } /* Начальное положение немного выше экрана */
+    10% { opacity: 1; top: 90px; } /* Появляется с отступом сверху */
+    90% { opacity: 1; top: 90px; } /* Остается в позиции некоторое время */
+    100% { opacity: 0; top: 0; } /* Плавно исчезает */
+}
+
+
+@media (max-width: 768px) {
+    .additional-application-form {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-container,
+    .form-container {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+}

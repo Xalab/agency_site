@@ -1,0 +1,100 @@
+.contacts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 20px 60px 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Плитка с контактной информацией */
+.contact-image-container {
+    width: 45%;
+    background-image: url('../../assets/img_contacts.png'); /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    height: 457.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-overlay {
+    background-color: rgba(90, 101, 216, 0.8); /* Полупрозрачный фиолетовый фон */
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Плитка с формой */
+.form-container {
+    width: 45%;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #5a65d8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group.error input {
+    border-bottom-color: red;
+}
+
+button[type="submit"] {
+    padding: 15px 0;
+    background-color: #5a65d8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2f80ed;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-image-container, .form-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-image-container {
+        height: 300px; /* Уменьшаем высоту для мобильных устройств */
+    }
+}

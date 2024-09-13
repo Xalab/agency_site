@@ -1,0 +1,150 @@
+.job-details-details-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.job-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 80px 40px;
+    background-color: #ffffff;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.job-details-image {
+    flex: 1;
+    max-width: 50%;
+    background-image: url('../../assets/img_vac_1.svg'); /* Устанавливаем фоновое изображение */
+    background-size: cover; /* Изображение покрывает весь блок, сохраняя пропорции */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+.job-details-image img {
+    width: auto; /* Автоматическая ширина */
+    height: 100%; /* Занимает всю высоту блока */
+    object-fit: cover; /* Обеспечивает сохранение пропорций, заполняя блок */
+    border-radius: 20px;
+}
+
+.job-details-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.job-details-info h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.job-details-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.job-details-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.job-details-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .job-details {
+        flex-direction: column; /* Изменяем направление на столбец для мобильных */
+        padding: 20px; /* Уменьшаем отступы */
+    }
+
+    .job-details-image {
+        max-width: 100%; /* Устанавливаем изображение на всю ширину */
+        width: 100%;
+        margin: 0 auto 20px auto; /* Центрируем изображение и добавляем отступ снизу */
+        height: 0; /* Устанавливаем изображение квадратным */
+        padding-bottom: 100%; /* Высота изображения 100% от ширины для создания квадрата */
+    }
+
+    .job-details-info h1 {
+        text-align: center; /* Центрируем заголовок вакансии */
+    }
+
+    .job-details-info {
+        padding-left: 0; /* Убираем отступ слева для мобильной версии */
+        padding-right: 0;
+    }
+
+    .job-details-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Сохранение пропорций изображения, оно заполняет блок */
+    }
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-color: #f9f9f9;
+}
+
+/* Контейнер для спиннера */
+.loading-spinner {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+/* Стиль для каждой части спиннера */
+.spinner-part {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #3498db;
+    animation: spin 1.5s ease infinite;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Настройки для первой части спиннера */
+.part1 {
+    border-top-color: #3498db;
+    border-width: 10px;
+}
+
+/* Настройки для второй части спиннера (больше радиус) */
+.part2 {
+    border-top-color: #9b59b6;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 10px;
+    border-width: 8px;
+}
+
+/* Настройки для третьей части спиннера (меньше радиус) */
+.part3 {
+    border-top-color: #f39c12;
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+    border-width: 6px;
+}

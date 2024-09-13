@@ -1,0 +1,73 @@
+.collaboration-steps {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.collaboration-steps h2 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.coll_steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.coll_step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    text-align: left;
+    filter: invert(27%) sepia(77%) saturate(6673%) hue-rotate(225deg) brightness(100%) contrast(101%); /* Фильтр для изменения цвета изображения на фиолетовый */
+}
+
+.coll_step p {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .coll_steps-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .coll_step p {
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        
+    }
+
+    .collaboration-steps h2 {
+        font-size: 30px;
+    }
+
+    .collaboration-steps {
+        padding: 60px 20px 30px 20px;
+    }
+}

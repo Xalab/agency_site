@@ -1,0 +1,51 @@
+.gratitude-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.gratitude-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px 20px;
+}
+
+.gratitude-image {
+    width: 100%;
+    height: 70vh; /* Высота блока */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background-color: rgba(76, 66, 222, 0.8); /* Полупрозрачный фиолетовый фон */
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 24px;
+}

@@ -1,0 +1,154 @@
+/* Общие стили для хедера */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f6f2;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    margin: 10px;
+    width: calc(100% - 20px);
+    z-index: 10;
+}
+
+.header__logo img {
+    max-height: 50px;
+}
+
+/* Десктопная версия навигации */
+.header__nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav ul li {
+    margin-right: 25px;
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: lighter;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.header__nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #4039eb;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.header__nav ul li a.active::after,
+.header__nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header__nav ul li a:hover {
+    color: #555;
+}
+
+/* Мобильное бургерное меню */
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.burger-menu {
+    width: 100%;
+    height: 3px; /* Увеличиваем высоту полоски для лучшей видимости */
+    background-color: #000; /* Задаём чёрный цвет полоскам */
+    margin: 5px 0; /* Делаем отступы чуть больше для визуальной ясности */
+}
+
+/* Мобильное меню */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #5a65d8;
+    transition: right 0.5s ease;
+    z-index: 100;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Крестик для закрытия */
+.mobile-nav__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav__logo img {
+    filter: brightness(0) invert(1);
+    max-height: 80px;
+    margin-bottom: 20px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav ul li {
+    margin: 20px 0;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
+
+.mobile-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 50px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .header__nav {
+        display: none; /* Прячем десктопное меню на мобильных устройствах */
+    }
+
+    .header__burger {
+        display: flex; /* Показываем бургерное меню только на мобильных устройствах */
+    }
+}
