@@ -42,7 +42,7 @@ const MainApplicationForm = () => {
         e.preventDefault();
         if (validateForm()) {
             try {
-                const response = await fetch('/api/data', {
+                const response = await fetch('https://job-map.agency/api/data', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

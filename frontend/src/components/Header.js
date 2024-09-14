@@ -40,7 +40,7 @@ const Header = () => {
                         </li>
                         <li>
                             <NavLink to="/about-us" className={({ isActive }) => isActive ? 'active' : ''}>
-                                Про нас
+                                О нас
                             </NavLink>
                         </li>
                         <li>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './JobsList.css';
 import { Link } from 'react-router-dom';
 import unidecode from 'unidecode';
+import { Helmet } from 'react-helmet-async';
 
 // Функция для транслитерации названия вакансии в URL-friendly формат
 const transliterate = (text) => {
@@ -43,6 +44,9 @@ const JobsList = () => {
 
     return (
         <section className="jobs-summary">
+            <Helmet>
+                <title>JobMap Europe - Вакансии</title>
+            </Helmet>
             <h2>Вакансии</h2>
             <div className="jobs-grid">
                 {jobs.map((job, index) => (

@@ -13,7 +13,7 @@ const Breadcrumbs = ({ jobTitle }) => {
             case 'contacts':
                 return 'Контакты';
             case 'about-us':
-                return 'Про нас';
+                return 'О нас';
             default:
                 return jobTitle || path; // Если есть jobTitle, используем его, иначе просто путь
         }

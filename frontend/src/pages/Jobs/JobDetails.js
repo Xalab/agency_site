@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import unidecode from 'unidecode';
+import { Helmet } from 'react-helmet-async';
 
 const transliterate = (text) => {
     return unidecode(text).replace(/\s+/g, '-').toLowerCase();
@@ -51,6 +52,9 @@ const JobDetails = () => {
 
     return (
         <div className="job-details-page">
+            <Helmet>
+                <title>JobMap Europe - {job.title}</title>
+            </Helmet>
             <Header />
             <Breadcrumbs jobTitle={job.title} />
             <main className="job-details">

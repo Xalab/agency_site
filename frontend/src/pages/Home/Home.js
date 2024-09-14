@@ -8,10 +8,14 @@ import AboutUs from './AboutUs';
 import AdditionalApplicationForm from './AdditionalApplicationForm';
 import Footer from '../../components/Footer';
 import './Home.css';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div className="home-page">
+            <Helmet>
+                <title>JobMap Europe</title>
+            </Helmet>
             <Header />
             <main>
                 <MainApplicationForm />

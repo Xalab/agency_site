@@ -6,10 +6,14 @@ import './AboutUsPage.css';
 import imgAboutUs from '../../assets/img_about_us2.png';
 import igor from "../../assets/member_igor.png";
 import anna from "../../assets/member_anna.png";
+import { Helmet } from 'react-helmet-async';
 
 const AboutUsPage = () => {
     return (
         <div className="about-us-page">
+            <Helmet>
+                <title>JobMap Europe - О нас</title>
+            </Helmet>
             <Header />
             <Breadcrumbs />   
             <main>

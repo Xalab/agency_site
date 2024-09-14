@@ -221,4 +221,9 @@ button[type="submit"]:hover {
         margin: 0 0 20px 0;
     }
 
+    .contacts-container {
+        padding: 0px;
+        text-align: left;
+    }
+
 }

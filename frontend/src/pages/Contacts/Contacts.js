@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import './Contacts.css';
 import contactsData from '../../contacts.json';
+import { Helmet } from 'react-helmet-async';
 
 const Contacts = () => {
     const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ const Contacts = () => {
         e.preventDefault();
         if (validateForm()) {
             try {
-                const response = await fetch('/api/data', {
+                const response = await fetch('https://job-map.agency/api/data', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -74,9 +75,12 @@ const Contacts = () => {
 
     return (
         <div className="contacts-page">
+            <Helmet>
+                <title>JobMap Europe - Контакты</title>
+            </Helmet>
             <Header />
             <Breadcrumbs />
-            <main className="contacts-container">
+            <main className="contacts-page-container">
                 {successMessage && (
                     <div className="success-message">Заявка успешно отправлена</div>
                 )}
