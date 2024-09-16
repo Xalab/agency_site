@@ -1,3 +1,17 @@
+/* Стили для ссылок */
+.contact-link {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffcc00; /* Цвет текста при наведении */
+    border-bottom: 1px solid #ffcc00; /* Подчеркивание при наведении */
+}
+
+/* Остальные стили */
 .contacts-page-container {
     display: flex;
     justify-content: space-between;
@@ -10,7 +24,7 @@
 /* Плитка с контактной информацией */
 .contact-image-container {
     width: 45%;
-    background-image: url('../../assets/img_contacts.png'); /* Путь к изображению */
+    background-image: url('../../assets/img_contacts.png');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -21,7 +35,7 @@
 }
 
 .contact-overlay {
-    background-color: rgba(90, 101, 216, 0.8); /* Полупрозрачный фиолетовый фон */
+    background-color: rgba(90, 101, 216, 0.8);
     color: white;
     padding: 40px;
     border-radius: 20px;
@@ -34,6 +48,15 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
+}
+
+.contact-overlay h2 {
+    margin-bottom: 20px;
+}
+
+.contact-overlay p {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 /* Плитка с формой */
@@ -89,12 +112,13 @@ button[type="submit"]:hover {
         align-items: center;
     }
 
-    .contact-image-container, .form-container {
+    .contact-image-container,
+    .form-container {
         width: 100%;
         margin-bottom: 20px;
     }
 
     .contact-image-container {
-        height: 400px; /* Уменьшаем высоту для мобильных устройств */
+        height: 400px;
     }
 }

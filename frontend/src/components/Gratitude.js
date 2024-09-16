@@ -10,7 +10,7 @@ const Gratitude = () => {
             <Header />
             <main className="gratitude-content">
                 <div className="gratitude-image" style={{ backgroundImage: `url(${imgGratitude})` }}>
-                    <div className="overlay">
+                    <div className="gratitude-overlay">
                         <h1>Благодарим вас за отправку заявки</h1>
                         <p>Мы уже начали обработку вашей заявки</p>
                     </div>

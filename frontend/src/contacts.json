@@ -1,20 +1,19 @@
 {
   "contacts": {
-    "phone": {
-      "label": "Телефон",
-      "value": "+380123456789"
-    },
     "email": {
       "label": "Электронная почта",
-      "value": "example@example.com"
+      "display": "info@job-map.agency",
+      "value": "mailto:info@job-map.agency"
     },
-    "telegram": {
-      "label": "Telegram",
-      "value": "@example_telegram"
+    "instagram": {
+      "label": "Instagram",
+      "display": "@jobMapEurope",
+      "value": "https://www.instagram.com/galteamelyushin?igsh=MWx3cHNudGhtbGc4ZQ%3D%3D&utm_source=qr"
     },
-    "whatsapp": {
-      "label": "WhatsApp",
-      "value": "+380987654321"
+    "vkontakte": {
+      "label": "VK",
+      "display": "Наша группа ВКонтакте",
+      "value": "https://vk.com/club227392148"
     }
   }
 }

@@ -87,18 +87,19 @@ const Contacts = () => {
                 <div className="contact-image-container">
                     <div className="contact-overlay">
                         <h2>Свяжитесь с нами</h2>
-                        {contactsData.contacts.email && (
-                            <p><strong>{contactsData.contacts.email.label}:</strong> {contactsData.contacts.email.value}</p>
-                        )}
-                        {contactsData.contacts.phone && (
-                            <p><strong>{contactsData.contacts.phone.label}:</strong> {contactsData.contacts.phone.value}</p>
-                        )}
-                        {contactsData.contacts.telegram && (
-                            <p><strong>{contactsData.contacts.telegram.label}:</strong> {contactsData.contacts.telegram.value}</p>
-                        )}
-                        {contactsData.contacts.whatsapp && (
-                            <p><strong>{contactsData.contacts.whatsapp.label}:</strong> {contactsData.contacts.whatsapp.value}</p>
-                        )}
+                        {Object.entries(contactsData.contacts).map(([key, contact]) => (
+                            <p key={key}>
+                                <strong>{contact.label}:</strong>{' '}
+                                <a
+                                    href={contact.value}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="contact-link"
+                                >
+                                    {contact.display || contact.value}
+                                </a>
+                            </p>
+                        ))}
                     </div>
                 </div>
                 <div className="form-container">
@@ -128,7 +129,7 @@ const Contacts = () => {
                                 type="text"
                                 id="location"
                                 name="location"
-                                placeholder="Место"
+                                placeholder="Местоположение"
                                 value={formData.location}
                                 onChange={handleChange}
                             />

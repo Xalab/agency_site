@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/logo.png';
 import burgerIcon from '../assets/hamburger.png';
+import { FaInstagram, FaTelegramPlane, FaWhatsapp, FaVk } from 'react-icons/fa';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,14 +75,27 @@ const Header = () => {
                             <NavLink to="/jobs" onClick={toggleMenu}>Вакансии</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about-us" onClick={toggleMenu}>Про нас</NavLink>
+                            <NavLink to="/about-us" onClick={toggleMenu}>О нас</NavLink>
                         </li>
                         <li>
                             <NavLink to="/contacts" onClick={toggleMenu}>Контакты</NavLink>
                         </li>
                     </ul>
                     <div className="social-links">
-                        (оставляем соц.сети)
+                    {
+                        //<a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
+                        //    <FaTelegramPlane />
+                        //</a>
+                        //<a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
+                        //    <FaWhatsapp />
+                        //</a>
+                    }
+                        <a href="https://vk.com/club227392148" target="_blank" rel="noopener noreferrer" className="social-link">
+                            <FaVk />
+                        </a>
+                        <a href="https://www.instagram.com/galteamelyushin?igsh=MWx3cHNudGhtbGc4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-link">
+                            <FaInstagram />
+                        </a>
                     </div>
                 </div>
             </nav>

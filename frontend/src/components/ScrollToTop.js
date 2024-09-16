@@ -5,8 +5,8 @@ const ScrollToTop = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Прокручиваем страницу вверх
-    }, [pathname]); // Срабатывает каждый раз, когда меняется путь
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return null;
 };

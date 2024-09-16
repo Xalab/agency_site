@@ -128,7 +128,7 @@ const MainApplicationForm = () => {
                     <input
                         type="text"
                         name="location"
-                        placeholder="Место"
+                        placeholder="Местоположение"
                         value={formData.location}
                         onChange={handleChange}
                         style={{ borderColor: errors.location ? 'red' : '#ccc' }}

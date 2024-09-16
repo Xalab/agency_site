@@ -80,26 +80,19 @@ const AdditionalApplicationForm = () => {
 
                     {/* Выводим контакты из contacts.json */}
                     <div className="contacts-container">
-                        {contactsData.contacts.phone && (
-                            <div className="contact-item">
-                                <strong>{contactsData.contacts.phone.label}:</strong> {contactsData.contacts.phone.value}
-                            </div>
-                        )}
-                        {contactsData.contacts.email && (
-                            <div className="contact-item">
-                                <strong>{contactsData.contacts.email.label}:</strong> {contactsData.contacts.email.value}
-                            </div>
-                        )}
-                        {contactsData.contacts.telegram && (
-                            <div className="contact-item">
-                                <strong>{contactsData.contacts.telegram.label}:</strong> {contactsData.contacts.telegram.value}
-                            </div>
-                        )}
-                        {contactsData.contacts.whatsapp && (
-                            <div className="contact-item">
-                                <strong>{contactsData.contacts.whatsapp.label}:</strong> {contactsData.contacts.whatsapp.value}
-                            </div>
-                        )}
+                    {Object.entries(contactsData.contacts).map(([key, contact]) => (
+                            <p key={key}>
+                                <strong>{contact.label}:</strong>{' '}
+                                <a
+                                    href={contact.value}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="contact-link"
+                                >
+                                    {contact.display || contact.value}
+                                </a>
+                            </p>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -130,7 +123,7 @@ const AdditionalApplicationForm = () => {
                             type="text"
                             id="location"
                             name="location"
-                            placeholder="Место"
+                            placeholder="Местоположение"
                             value={formData.location}
                             onChange={handleChange}
                         />

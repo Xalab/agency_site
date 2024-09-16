@@ -22,7 +22,7 @@ const Footer = () => {
                             Вакансии
                         </NavLink>
                         <NavLink to="/about-us" activeClassName="active" className="footer-link">
-                            Про нас
+                            О нас
                         </NavLink>
                         <NavLink to="/contacts" activeClassName="active" className="footer-link">
                             Контакты
@@ -31,12 +31,14 @@ const Footer = () => {
                 </div>
                 <div className="footer-right">
                     <p className="social-links">
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <FaTelegramPlane />
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <FaWhatsapp />
-                        </a>
+                        {
+                        //<a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
+                         //   <FaTelegramPlane />
+                        //</a>
+                        //<a href="#" target="_blank" rel="noopener noreferrer" className="social-link">
+                        //    <FaWhatsapp />
+                        //</a>
+                        }
                         <a href="https://vk.com/club227392148" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaVk />
                         </a>

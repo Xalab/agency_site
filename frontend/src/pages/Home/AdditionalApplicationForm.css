@@ -1,3 +1,16 @@
+/* Стили для ссылок */
+.contact-link {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffcc00; /* Цвет текста при наведении */
+    border-bottom: 1px solid #ffcc00; /* Подчеркивание при наведении */
+}
+
 .additional-application-form {
     display: flex;
     justify-content: center;
