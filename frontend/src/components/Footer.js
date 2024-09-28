@@ -42,7 +42,7 @@ const Footer = () => {
                         <a href="https://vk.com/club227392148" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaVk />
                         </a>
-                        <a href="https://www.instagram.com/galteamelyushin?igsh=MWx3cHNudGhtbGc4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://www.instagram.com/job_map_agency?igsh=MTBjcjB5dmp6anBkaw==" target="_blank" rel="noopener noreferrer" className="social-link">
                             <FaInstagram />
                         </a>
                     </p>
