@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MainApplicationForm.css';
-import img1 from '../../assets/SE.png';
+import img1 from '../../assets/EN.png';
 import img2 from '../../assets/woman-farmer.png';
 import img3 from '../../assets/NO.png';
 import img4 from '../../assets/DE.png';

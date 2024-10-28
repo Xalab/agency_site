@@ -77,7 +77,9 @@ const JobDetails = () => {
                             <li key={index}>{requirement}</li>
                         ))}
                     </ul>
-                    <p><strong>Место работы:</strong> {job.city}</p>
+                    {
+                        //<p><strong>Место работы:</strong> {job.city}</p>
+                    }
                 </div>
             </main>
             <Footer />

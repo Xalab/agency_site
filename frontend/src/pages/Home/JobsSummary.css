@@ -48,6 +48,16 @@
     margin-right: 8px;
 }
 
+.job-image .watermark {
+    position: absolute;
+    bottom: 20px; /* Можно настроить по вашему желанию */
+    right: 20px;  /* Можно настроить по вашему желанию */
+    opacity: 0.5; /* Прозрачность водяного знака */
+    width: 50px;  /* Размер логотипа */
+    height: auto;
+    pointer-events: none; /* Чтобы водяной знак не перехватывал события мыши */
+}
+
 .job-card {
     display: flex;
     flex-direction: column;

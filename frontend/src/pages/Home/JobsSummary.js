@@ -32,6 +32,7 @@ const JobsSummary = () => {
                 {jobs.map((job, index) => (
                     <div key={index} className="job-card-wrapper">
                         <div className="job-image" style={{ backgroundImage: `url(${job.image})` }}>
+                            <img src="/logo.png" alt="Watermark" className="watermark" />
                             <span className="job-country"><i className="fas fa-map-marker-alt"></i> {job.country}</span>
                         </div>
                         <div className="job-card">
